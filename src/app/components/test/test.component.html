@@ -1,0 +1,25 @@
+<p>test works!</p>
+
+<form [formGroup]="formGroup" (ngSubmit)="done()">
+    <div class="v1field" >
+        <mat-form-field>
+          <mat-label>1° Voice</mat-label>
+          <mat-select formControlName="mic1" >
+            <mat-option *ngFor="let s of filtredElement(musiciens, 'mic1')" [value]="s.name" >{{ s.name }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="v2field" >
+        <mat-form-field>
+          <mat-label>2° Voice</mat-label>
+          <mat-select formControlName="mic2" >
+            <mat-option *ngFor="let s of filtredElement(musiciens, 'mic2')" [value]="s.name">{{ s.name }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <input value="send" type="submit" />
+      </div>
+</form>
