@@ -36,7 +36,6 @@ export class TestComponent {
 
     for (const iterator of Object.keys(this.formGroup.value) ) 
     {
-      console.log("iterator : " + iterator);
       if(iterator != inputName && this.formGroup.value[iterator] != "")
       {
         selectedMusicians.push(this.formGroup.value[iterator])
